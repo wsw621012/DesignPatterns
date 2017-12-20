@@ -1,0 +1,23 @@
+{
+  "type": "CoinDisp",
+  "coin": "Quarter",
+  "count": 10,
+  "next": {
+    "type": "CoinDisp",
+    "coin": "Dime",
+    "count": 10,
+    "next": {
+      "type": "CoinDisp",
+      "coin": "Nickel",
+      "count": 10,
+      "next": {
+        "type": "CoinDisp",
+        "coin": "Pennie",
+        "count": 10,
+        "next": {
+          "type": "NullCoinDisp"
+        }
+      }
+    }
+  }
+}

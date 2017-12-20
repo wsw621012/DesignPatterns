@@ -1,0 +1,98 @@
+{
+  "type": "Composite",
+  "shapes": [
+    {
+      "type": "Composite",
+      "shapes": [
+        {
+          "type": "Circle",
+          "radius": 5
+        },
+        {
+          "type": "Circle",
+          "radius": 5
+        },
+        {
+          "type": "Rectangle",
+          "width": 25,
+          "height": 20
+        },
+        {
+          "type": "Triangle",
+          "base": 5,
+          "height": 5
+        },
+        {
+          "type": "Ellipse",
+          "radius1": 15,
+          "radius2": 10
+        }
+      ]
+    },
+    {
+      "type": "Rectangle",
+    	"width": 40,
+    	"height": 80
+    },
+    {
+      "type": "Composite",
+      "shapes": [
+        {
+          "type": "Rectangle",
+          "width": 10,
+          "height": 20
+        },
+        {
+          "type": "Triangle",
+          "base": 10,
+          "height": 5
+        }
+      ]
+    },
+    {
+      "type": "Composite",
+      "shapes": [
+        {
+          "type": "Rectangle",
+          "width": 10,
+          "height": 20
+        },
+        {
+          "type": "Triangle",
+          "base": 10,
+          "height": 5
+        }
+      ]
+    },
+    {
+      "type": "Composite",
+      "shapes": [
+        {
+          "type": "Rectangle",
+          "width": 20,
+          "height": 30
+        },
+        {
+          "type": "Ellipse",
+          "radius1": 10,
+          "radius2": 5
+        }
+      ]
+    },
+    {
+      "type": "Composite",
+      "shapes": [
+        {
+          "type": "Rectangle",
+          "width": 20,
+          "height": 30
+        },
+        {
+          "type": "Ellipse",
+          "radius1": 10,
+          "radius2": 5
+        }
+      ]
+    }
+  ]
+}

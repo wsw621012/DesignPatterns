@@ -1,0 +1,28 @@
+{
+  "type": "Composite",
+  "shapes": [
+    {
+      "type": "Circle",
+      "radius": 5
+    },
+    {
+      "type": "Circle",
+      "radius": 5
+    },
+    {
+      "type": "Rectangle",
+      "width":25,
+      "height": 20
+    },
+    {
+      "type": "Triangle",
+      "height": 5,
+      "base": 5
+    },
+    {
+      "type": "Ellipse",
+      "radius1": 15,
+      "radius2": 10
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "shapes": {
+    "Circle": {
+      "type": "Circle"
+    },
+    "Ellipse": {
+      "type": "Ellipse"
+    },
+    "Rectangle": {
+      "type": "Rectangle"
+    },
+    "Triangle": {
+      "type": "Triangle"
+    },
+    "Square": {
+      "type": "Square"
+    }
+  }
+}

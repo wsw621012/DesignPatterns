@@ -1,0 +1,12 @@
+{
+  "type": "Color",
+  "color": "Red",
+  "shape": {
+    "type": "Border",
+    "width": 10,
+    "shape": {
+      "type": "Circle",
+      "radius": 5
+    }
+  }
+}

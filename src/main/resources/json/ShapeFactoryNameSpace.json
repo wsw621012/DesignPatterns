@@ -1,0 +1,9 @@
+{
+  "shapes": {
+    "Circle": "com.lucifer.dp.shape.Circle",
+    "Ellipse": "com.lucifer.dp.shape.Ellipse",
+    "Rectangle": "com.lucifer.dp.shape.Rectangle",
+    "Triangle": "com.lucifer.dp.shape.Triangle",
+    "Square": "com.lucifer.dp.shape.Square"
+  }
+}

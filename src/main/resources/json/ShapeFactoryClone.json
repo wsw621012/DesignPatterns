@@ -1,0 +1,27 @@
+{
+  "shapes": {
+    "Circle": {
+      "type": "Circle",
+      "radius": 10
+    },
+    "Ellipse": {
+      "type": "Ellipse",
+      "radius1": 10,
+      "radius2": 20
+    },
+    "Rectangle": {
+      "type": "Rectangle",
+      "width": 5,
+      "height": 10
+    },
+    "Triangle": {
+      "type": "Triangle",
+      "base": 10,
+      "height": 10
+    },
+    "Square": {
+      "type": "Square",
+      "length": 5
+    }
+  }
+}

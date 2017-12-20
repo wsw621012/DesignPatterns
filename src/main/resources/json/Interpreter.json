@@ -1,0 +1,28 @@
+{
+  "type": "OR",
+  "exp1": {
+    "type": "AND",
+    "exp1": {
+      "type": "CONST",
+      "bool": "true"
+    },
+    "exp2": {
+      "type": "VAR",
+      "name": "x"
+    }
+  },
+  "exp2": {
+  	"type":"AND",
+  	"exp1":{
+  		"type":"VAR",
+  		"name":"y"
+  	},
+  	"exp2":{
+  		"type":"NOT",
+  		"exp": {
+  			"type":"VAR",
+  			"name":"x"
+  		}
+  	}
+  }
+}

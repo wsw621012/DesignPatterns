@@ -1,0 +1,19 @@
+{
+  "coin": "Quarter",
+  "count": 10,
+  "next": {
+    "coin": "Dime",
+    "count": 10,
+    "next": {
+      "coin": "Nickel",
+      "count": 10,
+      "next": {
+        "coin": "Pennie",
+        "count": 10,
+        "next": {
+          
+        }
+      }
+    }
+  }
+}
