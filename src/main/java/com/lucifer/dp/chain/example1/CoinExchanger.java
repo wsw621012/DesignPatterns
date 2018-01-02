@@ -45,7 +45,7 @@ public class CoinExchanger {
 		if (amount > 0) {
 			// rollback
 			for (Coin coin : coinBox.keySet()) {
-				Integer number = result.get(coin);
+				Integer number = result.get(coin.getName());
 				if (number != null) {
 					int remain = coinBox.get(coin);
 					coinBox.put(coin, remain + number.intValue());
