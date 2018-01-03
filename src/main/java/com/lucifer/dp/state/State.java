@@ -6,7 +6,7 @@ public interface State {
 
 	<T> T pop(SimpleQueue<T> q);
 
-	default <T> void changeState(SimpleQueue<T> queue, QueueState state) {
+	default <T> void changeState(SimpleQueue<T> queue, StateEnum state) {
 		queue.setState(state);
 	}
 

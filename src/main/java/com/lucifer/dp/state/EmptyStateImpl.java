@@ -5,7 +5,7 @@ public class EmptyStateImpl implements State {
 	@Override
 	public <T> boolean push(T t, SimpleQueue<T> q) {
 		q.getContent().add(t);
-		changeState(q, QueueState.Regular);
+		changeState(q, StateEnum.Regular);
 		return true;
 	}
 

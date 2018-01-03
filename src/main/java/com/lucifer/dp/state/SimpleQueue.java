@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SimpleQueue<T> {
 
-	private QueueState state = QueueState.Empty;
+	private StateEnum state = StateEnum.Empty;
 
 	private final int capacity;
 
@@ -35,7 +35,7 @@ public class SimpleQueue<T> {
 		return state.pop(this);
 	}
 
-	public void setState(QueueState state) {
+	public void setState(StateEnum state) {
 		this.state = state;
 		System.out.println("State changes to: " + state.toString());
 	}

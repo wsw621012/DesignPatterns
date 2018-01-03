@@ -8,7 +8,7 @@ public class RegularStateImpl implements State {
 	public <T> boolean push(T t, SimpleQueue<T> q) {
 		q.getContent().add(t);
 		if (q.getSize() >= q.getCapacity()) {
-			changeState(q, QueueState.Full);
+			changeState(q, StateEnum.Full);
 		}
 		return true;
 	}
@@ -19,7 +19,7 @@ public class RegularStateImpl implements State {
 		T t = content.get(0);
 		content.remove(0);
 		if (content.size() == 0) {
-			changeState(q, QueueState.Empty);
+			changeState(q, StateEnum.Empty);
 		}
 		return t;
 	}

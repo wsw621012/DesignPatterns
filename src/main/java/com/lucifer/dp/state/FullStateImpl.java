@@ -14,7 +14,7 @@ public class FullStateImpl implements State {
 		List<T> content = q.getContent();
 		T t = content.get(0);
 		content.remove(0);
-		changeState(q, QueueState.Regular);
+		changeState(q, StateEnum.Regular);
 		return t;
 	}
 

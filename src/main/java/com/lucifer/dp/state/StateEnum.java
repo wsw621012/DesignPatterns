@@ -2,13 +2,13 @@ package com.lucifer.dp.state;
 
 import com.lucifer.dp.exception.InitFailException;
 
-public enum QueueState implements State {
+public enum StateEnum implements State {
 
 	Empty(EmptyStateImpl.class), Regular(RegularStateImpl.class), Full(FullStateImpl.class);
 
 	private final State instance;
 
-	private QueueState(Class<?> type) {
+	private StateEnum(Class<?> type) {
 		try {
 			this.instance = (State) type.newInstance();
 		} catch (Exception e) {
