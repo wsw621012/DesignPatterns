@@ -9,9 +9,10 @@ public enum StateEnum implements State {
 	private final State instance;
 
 	private StateEnum(Class<?> type) {
+
 		try {
 			this.instance = (State) type.newInstance();
-		} catch (Exception e) {
+		} catch (InstantiationException | IllegalAccessException e) {
 			throw new InitFailException(e);
 		}
 	}
@@ -25,5 +26,5 @@ public enum StateEnum implements State {
 	public <T> T pop(SimpleQueue<T> q) {
 		return instance.pop(q);
 	}
-	
+
 }
