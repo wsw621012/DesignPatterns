@@ -3,7 +3,7 @@ package com.lucifer.dp.shape;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Rectangle implements Shape {
+public class Rectangle implements PolygonalShape {
 
 	private int width;
 	private int height;

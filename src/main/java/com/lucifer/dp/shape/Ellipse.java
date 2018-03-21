@@ -3,12 +3,10 @@ package com.lucifer.dp.shape;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Ellipse implements Shape {
+public class Ellipse implements CircularShape {
 
 	private int radius1;
 	private int radius2;
-	
-	final private static float RATIO = 3.14f;
 	
 	@Override
 	public void draw() {

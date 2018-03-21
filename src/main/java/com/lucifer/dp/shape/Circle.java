@@ -3,8 +3,10 @@ package com.lucifer.dp.shape;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Circle extends Ellipse {
+public class Circle implements CircularShape {
 
+	private int radius;
+	
 	@Override
 	public void draw() {
 		System.out.println("I'm a circle.");
@@ -21,10 +23,15 @@ public class Circle extends Ellipse {
 
 	@JsonCreator
 	public Circle(@JsonProperty("radius") int radius) {
-		super(radius, radius);
+		this.radius = radius;
 	}
 	
 	protected Circle(Circle circle) {
-		super(circle);
+		this.radius = circle.radius;
+	}
+
+	@Override
+	public float area() {
+		return RATIO * radius * radius;
 	}
 }

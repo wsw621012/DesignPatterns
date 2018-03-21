@@ -3,7 +3,7 @@ package com.lucifer.dp.shape;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Triangle implements Shape {
+public class Triangle implements PolygonalShape {
 
 	private int base;
 	private int height;
