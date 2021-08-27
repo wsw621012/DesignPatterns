@@ -1,5 +1,13 @@
-package com.lucifer.dp.abstractfactory;
+package com.lucifer.dp.abstractfactory.traditional;
 
-public interface TraditionalAbsShapeFactory {
-    public TranditionalFactory createFactory();
+public class TraditionalAbsShapeFactory {
+
+    public TraditionalFactory createFactory(String factoryName) {
+        if (factoryName.equals("circular")) {
+            return new TraditionalCircularShapeFactory();
+        } else if (factoryName.equals("polygonal")) {
+            return new TraditionalPolygonalShapeFactory();
+        }
+        return null;
+    }
 }

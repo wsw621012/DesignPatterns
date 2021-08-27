@@ -1,5 +1,7 @@
-package com.lucifer.dp.abstractfactory;
+package com.lucifer.dp.abstractfactory.traditional;
+
+import com.lucifer.dp.shape.Shape;
 
 public interface TraditionalFactory {
-    public TraditionalProduct createProduct();
+    Shape createShape(String shapeName);
 }

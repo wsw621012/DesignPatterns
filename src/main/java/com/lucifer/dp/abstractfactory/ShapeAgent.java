@@ -6,6 +6,7 @@ import java.util.Map;
 import com.lucifer.dp.exception.InitFailException;
 import com.lucifer.dp.shape.Shape;
 
+///< no thread-safe
 public class ShapeAgent {
 
 	private final static ShapeAgent instance = new ShapeAgent();

@@ -1,2 +1,5 @@
-package com.lucifer.dp.prototype;public interface Prototype {
+package com.lucifer.dp.prototype;
+
+public interface Prototype<T> {
+    T clone();
 }
