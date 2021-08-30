@@ -28,4 +28,15 @@ public class ExCircleBuildTest {
 
         assertTrue(customCircle instanceof ExCircle);
     }
+
+    @Test
+    public void testInnerExtCircleBuilder() {
+        int radius = 3;
+        Color defaultColor = Color.Yellow;
+        int defaultBoldSize = 1;
+        ExCircle defaultCircle = ExCircle.InnerBuilder.init(radius).withColor(defaultColor).withBoldSize(defaultBoldSize).build();
+        assertEquals(defaultCircle.getRadius(), radius);
+        assertEquals(defaultCircle.getBoldSize(), defaultBoldSize);
+        assertEquals(defaultCircle.getColor(), defaultColor);
+    }
 }
