@@ -13,7 +13,7 @@ public class ExCircle {
         this.boldSize = 1;
     }
 
-    protected ExCircle(ExCircle c) {
+    private ExCircle(ExCircle c) {
         this.radius = c.radius;
         this.color = c.color;
         this.boldSize = c.boldSize;
@@ -39,23 +39,23 @@ public class ExCircle {
         return boldSize;
     }
 
-    public static class InnerBuilder {
+    public static class Builder {
         private ExCircle c;
 
-        private InnerBuilder(int radius) {
+        private Builder(int radius) {
             c = new ExCircle(radius);
         }
 
-        public static InnerBuilder init(int radius) {
-            return  new InnerBuilder(radius);
+        public static Builder init(int radius) {
+            return new Builder(radius);
         }
 
-        public InnerBuilder withColor(Color color) {
+        public Builder withColor(Color color) {
             this.c.color = color;
             return this;
         }
 
-        public InnerBuilder withBoldSize(int boldSize) {
+        public Builder withBoldSize(int boldSize) {
             this.c.boldSize = boldSize;
             return this;
         }

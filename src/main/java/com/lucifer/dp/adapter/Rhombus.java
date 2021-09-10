@@ -1,22 +1,30 @@
 package com.lucifer.dp.adapter;
 
-public class Diamond {
+public class Rhombus {
 
     private int width;
+    private double acuteAngle;
 
-    public Diamond() {
+    public Rhombus() {
         width = 1;
+        acuteAngle = Math.PI / 4.0;
     }
 
-    public Diamond(int width) {
-        this.width = width;
+    public Rhombus(Rhombus rhombus) {
+        this.width = rhombus.width;
+        this.acuteAngle = rhombus.acuteAngle;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public double getAcuteAngle() {
+        return acuteAngle;
     }
 
     public void draw() {
         System.out.println("I'm a star.");
     }
 
-    public double calcArea() {
-        return
-    }
 }
