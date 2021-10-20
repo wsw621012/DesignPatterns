@@ -5,7 +5,7 @@ import com.lucifer.dp.shape.CircularShape;
 import com.lucifer.dp.shape.Shape;
 
 
-public class gitCircularShapeFactory implements ShapeFactory {
+public class CircularShapeFactory implements ShapeFactory {
 
 	@Override
 	public <T extends Shape> Shape create(Class<T> clazz) {
