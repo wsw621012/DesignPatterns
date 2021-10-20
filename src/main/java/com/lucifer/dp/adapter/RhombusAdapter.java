@@ -3,7 +3,7 @@ package com.lucifer.dp.adapter;
 import com.lucifer.dp.shape.Shape;
 
 public class RhombusAdapter implements Shape {
-    private Rhombus rhombus;
+    final private Rhombus rhombus;
 
     public RhombusAdapter(Rhombus rhombus) {
         this.rhombus = new Rhombus(rhombus);
