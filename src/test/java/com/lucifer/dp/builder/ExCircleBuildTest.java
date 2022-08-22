@@ -13,7 +13,7 @@ public class ExCircleBuildTest {
         int radius = 3;
         Color defaultColor = Color.Yellow;
         int defaultBoldSize = 1;
-        ExCircle defaultCircle = new ExCircleBuilder().create(radius).build();
+        ExtCircle defaultCircle = new NoGoodExCircleBuilder().create(radius).build();
         assertEquals(defaultCircle.getRadius(), radius);
         assertEquals(defaultCircle.getBoldSize(), defaultBoldSize);
         assertEquals(defaultCircle.getColor(), defaultColor);
@@ -24,12 +24,12 @@ public class ExCircleBuildTest {
         int radius = 5;
         Color customColor = Color.Red;
         int customBoldSize = 2;
-        ExCircle customCircle = new ExCircleBuilder().create(radius).withColor(customColor).withBoldSize(customBoldSize).build();
+        ExtCircle customCircle = new NoGoodExCircleBuilder().create(radius).withColor(customColor).withBoldSize(customBoldSize).build();
         assertEquals(customCircle.getRadius(), radius);
         assertEquals(customCircle.getBoldSize(), customBoldSize);
         assertEquals(customCircle.getColor(), customColor);
 
-        assertTrue(customCircle instanceof ExCircle);
+        assertTrue(customCircle instanceof ExtCircle);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class ExCircleBuildTest {
         int radius = 3;
         Color defaultColor = Color.Yellow;
         int defaultBoldSize = 1;
-        ExCircle defaultCircle = ExCircle.Builder.init(radius).withColor(defaultColor).withBoldSize(defaultBoldSize).build();
+        ExtCircle defaultCircle = new ExtCircle.Builder().withRadius(radius).withColor(defaultColor).withBoldSize(defaultBoldSize).build();
         assertEquals(defaultCircle.getRadius(), radius);
         assertEquals(defaultCircle.getBoldSize(), defaultBoldSize);
         assertEquals(defaultCircle.getColor(), defaultColor);

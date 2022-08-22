@@ -2,21 +2,21 @@ package com.lucifer.dp.builder;
 
 import com.lucifer.dp.decorator.Color;
 
-public class ExCircle {
+public class ExtCircle {
     private int radius;
     private Color color;
     private int boldSize;
 
-    public ExCircle(int radius) {
+    public ExtCircle(int radius) {
         this.radius = radius;
         this.color = Color.Yellow;
         this.boldSize = 1;
     }
 
-    private ExCircle(ExCircle c) {
-        this.radius = c.radius;
-        this.color = c.color;
-        this.boldSize = c.boldSize;
+    private ExtCircle(Builder builder) {
+        this.radius = builder.radius;
+        this.color = builder.color;
+        this.boldSize = builder.boldSize;
     }
 
     public int getRadius() {
@@ -40,28 +40,27 @@ public class ExCircle {
     }
 
     public static class Builder {
-        private ExCircle c;
+        private int radius;
+        private Color color;
+        private int boldSize;
 
-        private Builder(int radius) {
-            c = new ExCircle(radius);
-        }
-
-        public static Builder init(int radius) {
-            return new Builder(radius);
+        public Builder withRadius(int radius) {
+            this.radius = radius;
+            return this;
         }
 
         public Builder withColor(Color color) {
-            this.c.color = color;
+            this.color = color;
             return this;
         }
 
         public Builder withBoldSize(int boldSize) {
-            this.c.boldSize = boldSize;
+            this.boldSize = boldSize;
             return this;
         }
 
-        public ExCircle build() {
-            return new ExCircle(this.c);
+        public ExtCircle build() {
+            return new ExtCircle(this);
         }
     }
 }
