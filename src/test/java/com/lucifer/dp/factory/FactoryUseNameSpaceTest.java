@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class FactoryUseNameSpaceTest {
 		try {
 			Path path = Paths.get("json", "ShapeFactoryNameSpace.json");
 			FactoryUseNameSpace fns = JsonConverter.deserialize(path, FactoryUseNameSpace.class);
-			Shape circle = fns.create("Circle");
+			Optional<Shape> circle = fns.create("Circle");
 			assertEquals(circle.getClass().getName(), Circle.class.getName());
 		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block

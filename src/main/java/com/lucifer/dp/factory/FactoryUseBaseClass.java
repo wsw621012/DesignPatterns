@@ -1,6 +1,7 @@
 package com.lucifer.dp.factory;
 
 import java.util.Map;
+import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.lucifer.dp.shape.Shape;
@@ -14,10 +15,10 @@ public class FactoryUseBaseClass {
 		this.shapes = shapes;
 	}
 	
-	public Shape create(String name) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+	public Optional<Shape> create(String name) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 		if (shapes.containsKey(name)) {
-			return shapes.get(name);
+			return Optional.of(shapes.get(name));
 		}
-		return null;
+		return Optional.empty();
 	}
 }

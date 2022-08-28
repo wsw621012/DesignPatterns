@@ -46,6 +46,10 @@ public class ExtCircle extends BaseCircle {
         }
     }
 
+    /**
+     * Curiosity Recursive Generic Pattern
+     * @param builder
+     */
     private ExtCircle(CrgpBuilder builder) {
         super(builder.getRadius());
         this.color = builder.color;

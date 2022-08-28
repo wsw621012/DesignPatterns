@@ -28,6 +28,10 @@ public class BaseCircle {
         }
     }
 
+    /**
+     * Curiosity Recursive Generic Pattern
+     * @param builder
+     */
     private BaseCircle(CrgpBuilder builder) {
         this.radius = builder.radius;
     }

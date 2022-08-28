@@ -1,22 +1,22 @@
 package com.lucifer.dp.singleton;
 
-import java.util.Arrays;
-import java.util.List;
-
+import com.lucifer.dp.factory.FactoryUseNameSpace;
+import com.lucifer.dp.shape.Circle;
+import com.lucifer.dp.shape.Shape;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
+import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.modules.junit4.PowerMockRunner;
 
-import com.lucifer.dp.factory.FactoryUseNameSpace;
-import com.lucifer.dp.shape.Circle;
-import com.lucifer.dp.shape.Shape;
-import com.lucifer.dp.singleton.StaticBlockSingleton;
+import java.util.Arrays;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
 import static org.powermock.api.mockito.PowerMockito.*;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
 
 
 @RunWith(PowerMockRunner.class)
@@ -37,7 +37,10 @@ public class StaticBlockSingletonTest {
 		
 		shapeNames.forEach(n -> {
 			try {
-				fus.create(n).draw();				
+				fus.create(n).get().draw();
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			} catch (InstantiationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -62,12 +65,12 @@ public class StaticBlockSingletonTest {
 		
 		try {
 			when(StaticBlockSingleton.getInstance()).thenReturn(fus);
-			when(fus.create(Mockito.anyString())).thenReturn(c);
-		
-			Shape s1 = StaticBlockSingleton.getInstance().create("Circle");
+			when(fus.create(Mockito.anyString())).thenReturn(Optional.of(c));
+
+			Optional<Shape> s1 = StaticBlockSingleton.getInstance().create("Circle");
 			assertEquals(s1.getClass(), Circle.class);
 			
-			Shape s2 = StaticBlockSingleton.getInstance().create("XXX");
+			Optional<Shape> s2 = StaticBlockSingleton.getInstance().create("XXX");
 			assertEquals(s2.getClass(), Circle.class);
 			
 		} catch (InstantiationException e) {

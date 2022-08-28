@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -26,10 +27,10 @@ public class FactoryUseBaseClassTest {
 			Path path = Paths.get("json", "ShapeFactoryBaseClass.json");
 			FactoryUseBaseClass fbc = JsonConverter.deserialize(path, FactoryUseBaseClass.class);
 			
-			Shape circle1 = fbc.create("Circle");
+			Optional<Shape> circle1 = fbc.create("Circle");
 			assertEquals(circle1.getClass().getName(), Circle.class.getName());
 			
-			Shape circle2 = fbc.create("Circle");
+			Optional<Shape> circle2 = fbc.create("Circle");
 			assertEquals(circle2.getClass().getName(), Circle.class.getName());
 			
 			assertEquals(circle1, circle2);

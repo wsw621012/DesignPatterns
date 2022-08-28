@@ -31,7 +31,7 @@ public class LazyInitializedSingletonTest {
 
 		shapeNames.forEach(n -> {
 			try {
-				fus.create(n).draw();
+				fus.create(n).get().draw();
 			} catch (InstantiationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -59,7 +59,7 @@ public class LazyInitializedSingletonTest {
 				for (String n : shapeNames) {
 					
 					try {
-						fus.create(n).draw();
+						fus.create(n).get().draw();
 						Thread.sleep(1000);
 					} catch (InstantiationException e) {
 						// TODO Auto-generated catch block
