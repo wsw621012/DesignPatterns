@@ -11,9 +11,9 @@ import org.junit.Test;
 
 public class MediatorTest {
 
-	private Executor executor = Executors.newFixedThreadPool(4);
+	private final Executor executor = Executors.newFixedThreadPool(4);
 
-	private Tower t = new Tower();
+	private final Tower t = new Tower();
 
 	private List<Aircraft> aircrafts;
 

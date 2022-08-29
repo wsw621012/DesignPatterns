@@ -2,7 +2,7 @@ package com.lucifer.dp.dao;
 
 public class CustomerDAO {
 
-	private DataSource ds;
+	private final DataSource ds;
 	
 	
 	private CustomerTO cto;

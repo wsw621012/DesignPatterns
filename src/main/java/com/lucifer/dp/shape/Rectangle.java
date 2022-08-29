@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Rectangle implements PolygonalShape {
 
-	private int width;
-	private int height;
+	private final int width;
+	private final int height;
 	
 	@Override
 	public void draw() {

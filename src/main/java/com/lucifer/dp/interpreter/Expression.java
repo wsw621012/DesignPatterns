@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 	
 public interface Expression {
 
-	public boolean interpret(Context context);
+	boolean interpret(Context context);
 	
-	public String print(Context context);
+	String print(Context context);
 }

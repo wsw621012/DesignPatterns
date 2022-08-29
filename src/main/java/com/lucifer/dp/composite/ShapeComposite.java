@@ -10,7 +10,7 @@ import com.lucifer.dp.shape.Shape;
 public class ShapeComposite implements Shape {
 
 	@JsonProperty("shapes")
-	private List<Shape> shapes;
+	private final List<Shape> shapes;
 	
 	public void add(Shape shape) {
 		shapes.add(shape);

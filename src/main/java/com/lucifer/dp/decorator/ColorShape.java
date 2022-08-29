@@ -6,7 +6,7 @@ import com.lucifer.dp.shape.Shape;
 
 public class ColorShape extends ShapeDecorator {
 
-	private Color color;
+	private final Color color;
 
 	@JsonCreator
 	public ColorShape(@JsonProperty("shape") Shape shape, @JsonProperty("color") Color color) {

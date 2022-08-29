@@ -14,7 +14,7 @@ import com.lucifer.dp.exception.ConnectionFailException;
 
 public class HttpGetCommand {
 
-	private CloseableHttpClient httpClient;
+	private final CloseableHttpClient httpClient;
 	
 	public HttpGetCommand(CloseableHttpClient httpClient) {
 		this.httpClient = httpClient;

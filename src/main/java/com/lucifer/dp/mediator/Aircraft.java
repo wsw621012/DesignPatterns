@@ -5,11 +5,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public abstract class Aircraft {
 
-	private AirTrafficControlCentre atcc;
+	private final AirTrafficControlCentre atcc;
 
-	private AtomicInteger currentAltitude;
+	private final AtomicInteger currentAltitude;
 
-	private String callSign;
+	private final String callSign;
 
 	protected Aircraft(String callSign, AirTrafficControlCentre atcc, int initAltitude) {
 		this.callSign = callSign;

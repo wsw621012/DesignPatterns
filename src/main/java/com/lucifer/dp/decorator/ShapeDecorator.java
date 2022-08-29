@@ -8,7 +8,7 @@ public class ShapeDecorator implements Shape {
 
 	//@JsonUnwrapped
 	@JsonProperty()
-	private Shape shape;
+	private final Shape shape;
 	
 	@JsonCreator
 	public ShapeDecorator(@JsonProperty("shape") Shape shape) {

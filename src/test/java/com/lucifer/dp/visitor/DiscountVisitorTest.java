@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class DiscountVisitorTest {
 
-	private List<Book> books = new ArrayList<>();
+	private final List<Book> books = new ArrayList<>();
 	
 	@Before
 	public void init() {

@@ -4,8 +4,8 @@ import com.lucifer.dp.decorator.Color;
 
 public class ExtCircle extends BaseCircle {
 
-    private Color color;
-    private int boldSize;
+    private final Color color;
+    private final int boldSize;
 
     public ExtCircle(int radius, Color color, int boldSize) {
         super(radius);

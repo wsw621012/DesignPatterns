@@ -13,7 +13,7 @@ public enum CompressAlgorithm implements CompressStrategy {
 
 	private final CompressStrategy algo;
 	
-	private CompressAlgorithm(Class<?> type) {
+	CompressAlgorithm(Class<?> type) {
 		try {
 			this.algo = (CompressStrategy) type.newInstance();
 		} catch (InstantiationException | IllegalAccessException e) {

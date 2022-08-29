@@ -3,10 +3,11 @@ package com.lucifer.dp.mediator;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Tower implements AirTrafficControlCentre {
 
-	Map<String, Aircraft> aircrafts = new HashMap<>();
+	Map<String, Aircraft> aircrafts = new ConcurrentHashMap<>();
 
 	@Override
 	public void register(Aircraft aircraft) {
@@ -39,7 +40,7 @@ public class Tower implements AirTrafficControlCentre {
 			sb.append(MessageFormat.format("{0}({1}) ", a.getCallSign(), a.getAltitude()));
 		}
 		sb.append("-----");
-		System.out.println(sb.toString());
+		System.out.println(sb);
 	}
 
 	@Override

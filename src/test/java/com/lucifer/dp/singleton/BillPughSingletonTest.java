@@ -26,7 +26,7 @@ public class BillPughSingletonTest {
 		
 		shapeNames.forEach(n -> {
 			try {
-				fus.create(n).draw();				
+				fus.create(n).get().draw();
 			} catch (InstantiationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

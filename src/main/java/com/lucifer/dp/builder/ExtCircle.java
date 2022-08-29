@@ -3,7 +3,7 @@ package com.lucifer.dp.builder;
 import com.lucifer.dp.decorator.Color;
 
 public class ExtCircle {
-    private int radius;
+    private final int radius;
     private Color color;
     private int boldSize;
 

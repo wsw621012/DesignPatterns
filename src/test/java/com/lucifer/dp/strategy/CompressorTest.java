@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class CompressorTest {
 
-	private String origin = "THIS IS A TEST";
+	private final String origin = "THIS IS A TEST";
 
 	@Test
 	public void testAlgo() {
@@ -19,7 +19,7 @@ public class CompressorTest {
 			try (InputStream in = new ByteArrayInputStream(origin.getBytes());
 					ByteArrayOutputStream out = new ByteArrayOutputStream()) {
 				c.compress(in, out);
-				String afterZip = new String(out.toByteArray());
+				String afterZip = out.toString();
 
 				assertEquals(algo.toString() + origin, afterZip);
 

@@ -8,7 +8,7 @@ public enum StateEnum implements State {
 
 	private final State instance;
 
-	private StateEnum(Class<?> type) {
+	StateEnum(Class<?> type) {
 
 		try {
 			this.instance = (State) type.newInstance();

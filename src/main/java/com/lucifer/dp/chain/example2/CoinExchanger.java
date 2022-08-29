@@ -9,7 +9,7 @@ import com.lucifer.dp.exception.NotEnoughChangeException;
 
 public class CoinExchanger {
 
-	private Map<Coin, Integer> coinBox;
+	private final Map<Coin, Integer> coinBox;
 	
 	CoinExchanger(Map<Coin, Integer> coinBox) {
 		this.coinBox = coinBox;

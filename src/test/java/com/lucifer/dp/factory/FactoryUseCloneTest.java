@@ -27,25 +27,25 @@ public class FactoryUseCloneTest {
 			Path path1 = Paths.get("json", "ShapeFactoryBaseClass.json");
 			FactoryUseClone fc1 = JsonConverter.deserialize(path1, FactoryUseClone.class);
 			
-			Optional<Shape> circle1 = fc1.create("Circle");
+			Shape circle1 = fc1.create("Circle").get();
 			assertEquals(circle1.getClass().getName(), Circle.class.getName());
 			
-			Optional<Shape> circle2 = fc1.create("Circle");
+			Shape circle2 = fc1.create("Circle").get();
 			assertEquals(circle2.getClass().getName(), Circle.class.getName());
 			
 			assertNotEquals(circle1, circle2);
 			
-			assertEquals(circle1.get().area(), 0, 0.001);
+			assertEquals(circle1.area(), 0, 0.001);
 			
 			//fc = createShapeFactoryFromJson("json/ShapeFactoryClone.json");
 			
 			Path path2 = Paths.get("json", "ShapeFactoryClone.json");
 			FactoryUseClone fc2 = JsonConverter.deserialize(path2, FactoryUseClone.class);
 			
-			Optional<Shape> circle3 = fc2.create("Circle");
+			Shape circle3 = fc2.create("Circle").get();
 			assertEquals(circle3.getClass().getName(), Circle.class.getName());
 			
-			assertEquals(circle3.get().area(), 314, 0.1);
+			assertEquals(circle3.area(), 314, 0.1);
 			
 			
 		} catch (InstantiationException e) {

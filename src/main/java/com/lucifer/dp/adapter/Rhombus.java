@@ -2,8 +2,8 @@ package com.lucifer.dp.adapter;
 
 public class Rhombus {
 
-    private int width;
-    private double acuteAngle;
+    private final int width;
+    private final double acuteAngle;
 
     public Rhombus() {
         width = 1;

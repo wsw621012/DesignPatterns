@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Ellipse implements CircularShape {
 
-	private int radius1;
-	private int radius2;
+	private final int radius1;
+	private final int radius2;
 	
 	@Override
 	public void draw() {

@@ -27,10 +27,10 @@ public class FactoryUseBaseClassTest {
 			Path path = Paths.get("json", "ShapeFactoryBaseClass.json");
 			FactoryUseBaseClass fbc = JsonConverter.deserialize(path, FactoryUseBaseClass.class);
 			
-			Optional<Shape> circle1 = fbc.create("Circle");
+			Shape circle1 = fbc.create("Circle").get();
 			assertEquals(circle1.getClass().getName(), Circle.class.getName());
 			
-			Optional<Shape> circle2 = fbc.create("Circle");
+			Shape circle2 = fbc.create("Circle").get();
 			assertEquals(circle2.getClass().getName(), Circle.class.getName());
 			
 			assertEquals(circle1, circle2);

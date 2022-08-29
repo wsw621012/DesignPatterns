@@ -2,7 +2,7 @@ package com.lucifer.dp.command.traditional;
 
 public class Receiver {
 
-	private Command cmd;
+	private final Command cmd;
 	
 	public Receiver(Command cmd) {
 		this.cmd = cmd;

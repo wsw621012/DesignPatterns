@@ -5,9 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class OrExpression implements Expression {
 
-	private Expression exp1;
+	private final Expression exp1;
 	
-	private Expression exp2;
+	private final Expression exp2;
 	
 	@JsonCreator
 	public OrExpression(@JsonProperty("exp1") Expression exp1, @JsonProperty("exp2") Expression exp2) {

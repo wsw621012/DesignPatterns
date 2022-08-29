@@ -20,9 +20,9 @@ public class ObserverTaxi implements Observer {
 		}
 	}
 	
-	private Queue<Job> jobs = new ConcurrentLinkedQueue<>();
+	private final Queue<Job> jobs = new ConcurrentLinkedQueue<>();
 
-	private String id;
+	private final String id;
 	
 	public String getId() {
 		return id;

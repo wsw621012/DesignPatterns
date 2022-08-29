@@ -10,7 +10,7 @@ import com.lucifer.dp.observer.SubjectTaxiCentre;
 
 public class ExampleTest {
 
-	private SubjectTaxiCentre centre = new SubjectTaxiCentre();
+	private final SubjectTaxiCentre centre = new SubjectTaxiCentre();
 	
 	@Before
 	public void init() {

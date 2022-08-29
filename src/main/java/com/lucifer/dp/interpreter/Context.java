@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Context {
 
-	private Map<String, Boolean> table = new HashMap<>();
+	private final Map<String, Boolean> table = new HashMap<>();
 	
 	public void assign(VariableExpression exp, Boolean v) {
 		table.put(exp.getName(), v);

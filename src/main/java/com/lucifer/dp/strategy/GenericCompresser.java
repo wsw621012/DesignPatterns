@@ -7,7 +7,7 @@ import com.lucifer.dp.exception.InitFailException;
 
 public class GenericCompresser<T extends CompressStrategy> {
 
-	private CompressStrategy strategy;
+	private final CompressStrategy strategy;
 	private Class<T> type;
 	
 	public GenericCompresser() {

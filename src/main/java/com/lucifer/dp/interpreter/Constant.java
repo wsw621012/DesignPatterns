@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Constant implements Expression {
 
-	private boolean bool;
+	private final boolean bool;
 	
 	@JsonCreator
 	public Constant(@JsonProperty("bool") boolean bool) {

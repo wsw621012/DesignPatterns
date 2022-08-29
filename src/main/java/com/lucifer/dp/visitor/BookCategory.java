@@ -4,5 +4,5 @@ public enum BookCategory {
 	
 	Romance,
 	Travel,
-	Science;
+	Science
 }

@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Triangle implements PolygonalShape {
 
-	private int base;
-	private int height;
+	private final int base;
+	private final int height;
 	
 	@Override
 	public void draw() {

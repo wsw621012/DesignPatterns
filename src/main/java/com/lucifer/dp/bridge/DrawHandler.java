@@ -4,7 +4,7 @@ import com.lucifer.dp.decorator.Color;
 
 public interface DrawHandler {
 
-	public void drawLine(Point from, Point to);
+	void drawLine(Point from, Point to);
 	
-	public void fillColor(Color color);
+	void fillColor(Color color);
 }

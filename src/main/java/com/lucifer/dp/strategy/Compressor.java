@@ -5,7 +5,7 @@ import java.io.OutputStream;
 
 public class Compressor {
 
-	private CompressStrategy strategy;
+	private final CompressStrategy strategy;
 	
 	public Compressor(CompressStrategy strategy) {
 		this.strategy = strategy;

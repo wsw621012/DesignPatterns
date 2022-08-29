@@ -51,7 +51,7 @@ public class StaticBlockSingletonTest {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		});
 		
 		
@@ -67,10 +67,10 @@ public class StaticBlockSingletonTest {
 			when(StaticBlockSingleton.getInstance()).thenReturn(fus);
 			when(fus.create(Mockito.anyString())).thenReturn(Optional.of(c));
 
-			Optional<Shape> s1 = StaticBlockSingleton.getInstance().create("Circle");
+			Shape s1 = StaticBlockSingleton.getInstance().create("Circle").get();
 			assertEquals(s1.getClass(), Circle.class);
 			
-			Optional<Shape> s2 = StaticBlockSingleton.getInstance().create("XXX");
+			Shape s2 = StaticBlockSingleton.getInstance().create("XXX").get();
 			assertEquals(s2.getClass(), Circle.class);
 			
 		} catch (InstantiationException e) {

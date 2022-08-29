@@ -28,7 +28,7 @@ public class TaggedArraySpliterator<T> implements Spliterator<T> {
 
 	@Override
 	public long estimateSize() {
-		return (long) ((fence - origin) / 2);
+		return (fence - origin) / 2;
 	}
 
 	@Override

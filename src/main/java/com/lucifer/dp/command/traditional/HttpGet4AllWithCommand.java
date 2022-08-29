@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class HttpGet4AllWithCommand {
-    private CloseableHttpClient httpClient;
+    private final CloseableHttpClient httpClient;
 
     public HttpGet4AllWithCommand(CloseableHttpClient httpClient) {
         this.httpClient = httpClient;

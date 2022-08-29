@@ -19,9 +19,9 @@ import com.lucifer.dp.decorator.ColorShape;
 })
 public interface Shape {
 
-	public void draw();
+	void draw();
 	
-	public float area();
+	float area();
 	
-	public Shape clone();
+	Shape clone();
 }

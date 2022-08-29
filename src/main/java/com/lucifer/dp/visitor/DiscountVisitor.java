@@ -4,9 +4,9 @@ public class DiscountVisitor implements Visitor {
 
 	private double amount;
 	private int count;
-	private double discount;
-	private int threshold;
-	private BookCategory category;
+	private final double discount;
+	private final int threshold;
+	private final BookCategory category;
 	
 	public DiscountVisitor(BookCategory category, int threshold, double discount) {
 		this.threshold = threshold;

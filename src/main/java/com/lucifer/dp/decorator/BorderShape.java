@@ -6,7 +6,7 @@ import com.lucifer.dp.shape.Shape;
 
 public class BorderShape extends ShapeDecorator {
 
-	private int width;
+	private final int width;
 	
 	@JsonCreator
 	public BorderShape(@JsonProperty("shape") Shape shape, @JsonProperty("width") int width) {

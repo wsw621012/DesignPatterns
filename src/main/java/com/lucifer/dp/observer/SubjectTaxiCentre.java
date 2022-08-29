@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class SubjectTaxiCentre extends Observable {
 
-	private Map<UUID, String> requests = new ConcurrentHashMap<>();
+	private final Map<UUID, String> requests = new ConcurrentHashMap<>();
 	
 	public void register(ObserverTaxi taxi) {
 		super.addObserver(taxi);

@@ -26,7 +26,7 @@ public class FactoryUseNameSpaceTest {
 		try {
 			Path path = Paths.get("json", "ShapeFactoryNameSpace.json");
 			FactoryUseNameSpace fns = JsonConverter.deserialize(path, FactoryUseNameSpace.class);
-			Optional<Shape> circle = fns.create("Circle");
+			Shape circle = fns.create("Circle").get();
 			assertEquals(circle.getClass().getName(), Circle.class.getName());
 		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block

@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AndExpression implements Expression {
 
-	private Expression exp1;
-	private Expression exp2;
+	private final Expression exp1;
+	private final Expression exp2;
 	
 	@JsonCreator
 	public AndExpression(@JsonProperty("exp1") Expression exp1, @JsonProperty("exp2") Expression exp2) {

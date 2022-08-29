@@ -1,7 +1,7 @@
 package com.lucifer.dp.builder.crqp;
 
 public class BaseCircle {
-    private int radius;
+    private final int radius;
 
     public BaseCircle(int radius) {
         this.radius = radius;

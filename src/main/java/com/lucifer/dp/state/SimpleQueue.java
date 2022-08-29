@@ -9,7 +9,7 @@ public class SimpleQueue<T> {
 
 	private final int capacity;
 
-	private List<T> content = new ArrayList<T>();
+	private final List<T> content = new ArrayList<T>();
 
 	public SimpleQueue(int capacity) {
 		this.capacity = capacity;

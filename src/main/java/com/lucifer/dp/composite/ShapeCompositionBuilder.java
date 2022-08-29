@@ -8,7 +8,7 @@ import com.lucifer.dp.shape.Shape;
 
 public class ShapeCompositionBuilder {
 
-	private List<Shape> shapes;
+	private final List<Shape> shapes;
 	
 	public ShapeCompositionBuilder() {
 		this.shapes = new ArrayList<Shape>();

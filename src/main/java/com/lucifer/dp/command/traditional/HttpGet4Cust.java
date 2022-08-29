@@ -12,7 +12,7 @@ import java.io.InputStream;
 
 public class HttpGet4Cust {
 
-    private CloseableHttpClient httpClient;
+    private final CloseableHttpClient httpClient;
 
     public HttpGet4Cust(CloseableHttpClient httpClient) {
         this.httpClient = httpClient;

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NotExpression implements Expression {
 
-	private Expression exp;
+	private final Expression exp;
 	
 	@JsonCreator
 	public NotExpression(@JsonProperty("exp") Expression exp) {
