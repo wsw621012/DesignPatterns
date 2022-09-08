@@ -11,7 +11,7 @@ public class LazyInitializedSingleton {
 	private LazyInitializedSingleton() {
 	}
 
-	private static FactoryUseNameSpace instance;
+	private static volatile FactoryUseNameSpace instance;
 
 	public static FactoryUseNameSpace getInstance() {
 
