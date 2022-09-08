@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 import com.lucifer.dp.factory.FactoryUseNameSpace;
 import com.lucifer.dp.utils.JsonConverter;
 
-/** Non-Thread-Safe **/
+/** Thread-Safe **/
 public class StaticBlockSingleton {
 
 	private StaticBlockSingleton() {
