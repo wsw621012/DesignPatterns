@@ -15,4 +15,10 @@ public interface IDraw {
     }
 
     Shape makeShape();
+
+    // AAA makeAAA();
+    // BBB makeBBB();
+    // ....
+    // ZZZ makeZZZ();
+
 }

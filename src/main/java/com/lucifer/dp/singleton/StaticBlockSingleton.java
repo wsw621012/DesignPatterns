@@ -15,8 +15,12 @@ public class StaticBlockSingleton {
 
 	// static block initialization for exception handling
 	static {
-		instance = JsonConverter.deserialize(Paths.get("json", "ShapeFactoryNameSpace.json"),
-				FactoryUseNameSpace.class);
+		try {
+			instance = JsonConverter.deserialize(Paths.get("json", "ShapeFactoryNameSpace.json"),
+					FactoryUseNameSpace.class);
+		} catch (Exception e) {
+			//do something for error handling.
+		}
 	}
 
 	public static FactoryUseNameSpace getInstance() {
