@@ -17,15 +17,15 @@ public class CoinExchanger {
 
 	public Map<String, Integer> exchange(int amount) {
 
-		Map<String, Integer> result = new HashMap<String, Integer>();
+		Map<String, Integer> result = new HashMap<>();
 
-		List<Coin> coins = coinBox.entrySet().stream().filter(c -> (c.getValue().intValue() > 0))
+		List<Coin> coins = coinBox.entrySet().stream().filter(c -> (c.getValue() > 0))
 				.sorted((a, b) -> Integer.compare(b.getKey().getDenomination(),
 						a.getKey().getDenomination()))
-				.map(c -> c.getKey()).collect(Collectors.toList());
+				.map(Map.Entry::getKey).collect(Collectors.toList());
 
 		for (Coin coin : coins) {
-			int remain = coinBox.get(coin).intValue();
+			int remain = coinBox.get(coin);
 			int number = coin.floor(amount);
 			if (number <= remain) {
 				result.put(coin.getName(), number);

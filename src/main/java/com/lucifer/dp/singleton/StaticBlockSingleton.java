@@ -11,7 +11,7 @@ public class StaticBlockSingleton {
 	private StaticBlockSingleton() {
 	}
 
-	private static final FactoryUseNameSpace instance;
+	private static FactoryUseNameSpace instance;
 
 	// static block initialization for exception handling
 	static {
