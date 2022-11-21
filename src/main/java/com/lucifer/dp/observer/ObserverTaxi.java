@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class ObserverTaxi implements Observer {
 
-	private class Job {
+	private static class Job {
 		public UUID id;
 		public SubjectTaxiCentre centre;
 		
@@ -28,7 +28,7 @@ public class ObserverTaxi implements Observer {
 		return id;
 	}
 
-	public ObserverTaxi(String id, SubjectTaxiCentre centre) {
+	public ObserverTaxi(String id) {
 		this.id = id;
 		
 		CompletableFuture.runAsync(() -> {

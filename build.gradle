@@ -34,6 +34,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.14.0'
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.0'
+    implementation 'org.projectlombok:lombok:1.18.24'
 
     implementation 'org.apache.httpcomponents:httpclient:4.5'
     

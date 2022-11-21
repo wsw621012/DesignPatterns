@@ -2,29 +2,24 @@ package com.lucifer.dp.state;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Getter;
 
 public class SimpleQueue<T> {
 
 	private StateEnum state = StateEnum.Empty;
 
+	@Getter
 	private final int capacity;
 
+	@Getter
 	private final List<T> content = new ArrayList<T>();
 
 	public SimpleQueue(int capacity) {
 		this.capacity = capacity;
 	}
 
-	public int getCapacity() {
-		return capacity;
-	}
-
 	public int getSize() {
 		return content.size();
-	}
-
-	public List<T> getContent() {
-		return content;
 	}
 
 	public boolean push(T t) {

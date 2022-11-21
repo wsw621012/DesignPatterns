@@ -5,9 +5,6 @@ import java.text.MessageFormat;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.lucifer.dp.observer.ObserverTaxi;
-import com.lucifer.dp.observer.SubjectTaxiCentre;
-
 public class ExampleTest {
 
 	private final SubjectTaxiCentre centre = new SubjectTaxiCentre();
@@ -15,7 +12,7 @@ public class ExampleTest {
 	@Before
 	public void init() {
 		for (int i = 0; i < 3; i++) {
-			centre.register(new ObserverTaxi(MessageFormat.format("ID-{0}", i), centre));
+			centre.register(new ObserverTaxi(MessageFormat.format("ID-{0}", i)));
 		}
 	}
 	
